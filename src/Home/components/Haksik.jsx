@@ -8,7 +8,7 @@ function Haksik(props) {
     if (!(props.data[day] === undefined) && !(props.data[day] === '')) {
       return props.data[day].map((menu, idx) => {
         const key = Object.keys(menu)[0];
-        const menuName = Object.values(menu)[0];
+        const menuName = Object.values(menu)[0][0];
         return (
           <View key={idx} style={styles.menuBar}>
             <Text style={styles.menuTitle}>{key}메뉴</Text>
